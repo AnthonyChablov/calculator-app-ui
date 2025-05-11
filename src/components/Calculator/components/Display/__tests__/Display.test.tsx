@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import Display from "../Display";
 import { describe, it, expect } from "vitest";
 
-describe("HeaderText.tsx", () => {
+describe("Display.tsx", () => {
   it("should render in the DOM", () => {
     // Act
     render(<Display value="123" />);
