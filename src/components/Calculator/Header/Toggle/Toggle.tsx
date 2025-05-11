@@ -29,7 +29,7 @@ const MultiToggle: React.FC<ToggleProps> = ({
           className="text-gray-600 dark:text-gray-300 px-2 uppercase text-sm font-semibold"
         />
       )}
-      <div className="inline-flex rounded-full bg-gray-200 dark:bg-gray-700 shadow-sm">
+      <div className="inline-flex rounded-full bg-gray-200 dark:bg-gray-700 ">
         {themes.map((theme) => (
           <div
             key={theme}

@@ -1,4 +1,3 @@
-import React from "react";
 import Toggle from "./Toggle/Toggle";
 import HeaderText from "@/components/Typography/HeaderText/HeaderText";
 
