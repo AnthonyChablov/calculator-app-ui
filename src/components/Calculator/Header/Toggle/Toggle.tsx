@@ -22,14 +22,14 @@ const MultiToggle: React.FC<ToggleProps> = ({
   };
 
   return (
-    <div className="flex items-center justify-center space-x-4">
+    <div className="flex items-center justify-center space-x-8">
       {title && (
         <ParagraphText
           text={title}
           className="text-gray-600 dark:text-gray-300 px-2 uppercase text-sm font-semibold"
         />
       )}
-      <div className="inline-flex rounded-full bg-gray-200 dark:bg-gray-700 shadow-inner">
+      <div className="inline-flex rounded-full bg-gray-200 dark:bg-gray-700 shadow-sm">
         {themes.map((theme) => (
           <div
             key={theme}
@@ -43,9 +43,9 @@ const MultiToggle: React.FC<ToggleProps> = ({
             <button
               onClick={() => handleToggle(theme)}
               className={`w-6 h-6 hover:cursor-pointer rounded-full 
-                flex items-center justify-center text-gray-600 dark:text-gray-300 focus:outline-none ${
+                flex items-center justify-center text-gray-600 dark:text-gray-300 focus:outline-none  ${
                   activeTheme === theme
-                    ? "bg-indigo-500 text-white dark:bg-indigo-600"
+                    ? "bg-indigo-500 text-white dark:bg-indigo-600 shadow-sm"
                     : ""
                 }`}
             ></button>
