@@ -15,7 +15,7 @@ const HeaderText = ({
   id,
 }: HeaderTextProps) => {
   const headerSizes = {
-    h1: "text-6xl",
+    h1: "text-3xl",
     h2: "text-3xl",
     h3: "text-2xl",
     h4: "text-xl",
@@ -26,10 +26,7 @@ const HeaderText = ({
   const sizeClass = headerSizes[headerLevel];
 
   return (
-    <div
-      id={id || header}
-      className={cn(`text-zinc-200 dark:text-zinc-900 ${className}`)}
-    >
+    <div id={id || header} className={cn(` ${className}`)}>
       <HeaderTag className={sizeClass}>{header}</HeaderTag>
     </div>
   );
