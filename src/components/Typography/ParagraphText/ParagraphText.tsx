@@ -40,11 +40,7 @@ const ParagraphText = ({
   const sizeClass = paragraphSizes[size];
 
   return (
-    <p
-      className={cn(
-        `text-zinc-400 dark:text-zinc-500 font-medium ${sizeClass} ${className}`
-      )}
-    >
+    <p className={cn(` font-medium ${sizeClass} ${className}`)}>
       {text || children}
     </p>
   );

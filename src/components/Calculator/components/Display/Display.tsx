@@ -1,19 +1,19 @@
 import ParagraphText from "@/components/Typography/ParagraphText/ParagraphText";
 import { cn } from "@/lib/utils";
 
-interface ScreenProps {
+interface DisplayProps {
   className?: string;
   dataTestId?: string;
   value?: string | undefined;
   error?: string;
 }
 
-const Screen = ({
+const Display = ({
   className = "",
   dataTestId = "",
   value = "",
   error,
-}: ScreenProps) => {
+}: DisplayProps) => {
   return (
     <div className=" ">
       <div
@@ -34,4 +34,4 @@ const Screen = ({
   );
 };
 
-export default Screen;
+export default Display;
