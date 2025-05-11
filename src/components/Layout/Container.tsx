@@ -43,10 +43,10 @@ const Container = ({
       data-testid={dataTestId}
       role="container"
       className={cn(
-        `max-w-[160rem] container mx-auto px-3 md:px-8 lg:px-12 ${className}` // Combine default styles with any custom className passed as a prop.
+        `max-w-3/5 container mx-auto px-3 md:px-8 lg:px-12 ${className}` // Combine default styles with any custom className passed as a prop.
       )}
     >
-      {children}{" "}
+      {children}
       {/* Render the child elements passed to the Container component */}
     </div>
   );
