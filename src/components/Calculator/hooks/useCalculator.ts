@@ -1,26 +1,36 @@
 import { useState } from "react";
 import { Parser } from "expr-eval";
 
+const OPERATORS = ["+", "-", "*", "/", "x"];
+
 const useCalculator = () => {
   const [expression, setExpression] = useState("");
 
   const handleButtonClick = (value: string) => {
     if (value === "DEL") {
       setExpression((prevExpression) => prevExpression.slice(0, -1));
-    } else if (["+", "-", "*", "/"].includes(value)) {
-      // Prevent consecutive operators and operators at the beginning
-      if (expression && !["+", "-", "*", "/"].includes(expression.slice(-1))) {
+    } else if (OPERATORS.includes(value)) {
+      // Allow minus sign at the beginning or after another operator
+      if (
+        value === "-" &&
+        (!expression || OPERATORS.includes(expression.slice(-1)))
+      ) {
+        setExpression((prevExpression) => prevExpression + value);
+      } else if (
+        value !== "-" &&
+        expression &&
+        !OPERATORS.includes(expression.slice(-1))
+      ) {
         setExpression(
           (prevExpression) => prevExpression + value.replace("x", "*")
         );
       }
     } else if (value === ".") {
-      // Prevent multiple decimal points in the same number
       const lastNumber = expression.split(/[\+\-\*\/]/).pop();
       if (lastNumber && !lastNumber.includes(".")) {
         setExpression((prevExpression) => prevExpression + value);
       } else if (!expression) {
-        setExpression("0."); // Allow starting with a decimal
+        setExpression("0.");
       }
     } else if (value === "Clear") {
       setExpression("");
@@ -34,6 +44,7 @@ const useCalculator = () => {
   };
 
   const onEvaluate = () => {
+    if (!expression) return;
     try {
       const parser = new Parser();
       const expr = parser.parse(expression.replace("x", "*"));
