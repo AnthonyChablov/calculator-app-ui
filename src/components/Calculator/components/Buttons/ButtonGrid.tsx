@@ -9,11 +9,11 @@ interface ButtonGridProps {
   onEvaluate: () => void; // Optional: If you want to handle equals separately
 }
 
-const ButtonGrid: React.FC<ButtonGridProps> = ({
+const ButtonGrid = ({
   onButtonClick,
   resetGrid,
   onEvaluate,
-}) => {
+}: ButtonGridProps) => {
   function handleReset() {
     resetGrid();
   }
@@ -24,7 +24,10 @@ const ButtonGrid: React.FC<ButtonGridProps> = ({
   }
 
   return (
-    <div className="p-8 bg-slate-800 rounded-lg shadow-md">
+    <div
+      className="p-8 bg-slate-800 rounded-lg shadow-md"
+      data-testid="calculator-button-grid"
+    >
       {buttonLayout.map((row, rowIndex) => (
         <div key={rowIndex} className={cn(`grid gap-4 pb-4 grid-cols-4`)}>
           {row.map((key) => (
