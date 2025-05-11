@@ -5,7 +5,7 @@ import Header from "../Header";
 describe("Header.tsx", () => {
   it("should render in the DOM", () => {
     // Act
-    render(<Header />);
+    render(<Header headerTitle="calc" toggleTitle="THEME" />);
     const buttonGrid = screen.getByTestId("calculator-header");
 
     // Assert
@@ -13,7 +13,7 @@ describe("Header.tsx", () => {
   });
   it("should render with the correct className", () => {
     // Act
-    render(<Header />);
+    render(<Header headerTitle="calc" toggleTitle="THEME" />);
     const buttonGrid = screen.getByTestId("calculator-header");
 
     // Assert
