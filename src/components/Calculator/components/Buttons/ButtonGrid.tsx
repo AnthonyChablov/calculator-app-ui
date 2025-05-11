@@ -1,32 +1,39 @@
 import React from "react";
 import Button from "./Button/Button";
 import { buttonLayout } from "../../data/buttonLayout";
+import { cn } from "@/lib/utils";
 
 interface ButtonGridProps {
   onButtonClick: (value: string) => void; // Now the button click passes the button's value
   resetGrid: () => void;
+  onEvaluate: () => void; // Optional: If you want to handle equals separately
 }
 
 const ButtonGrid: React.FC<ButtonGridProps> = ({
   onButtonClick,
   resetGrid,
+  onEvaluate,
 }) => {
+  function handleReset() {
+    resetGrid();
+  }
+
+  function handleEquals() {
+    handleReset();
+    onEvaluate();
+  }
+
   return (
     <div className="p-8 bg-slate-800 rounded-lg shadow-md">
       {buttonLayout.map((row, rowIndex) => (
-        <div key={rowIndex} className={`grid gap-4 grid-cols-${row.length}`}>
+        <div key={rowIndex} className={cn(`grid gap-4 pb-4 grid-cols-4`)}>
           {row.map((key) => (
             <Button
-              className="w-24"
+              className=""
               key={key}
               label={key}
               onClick={() => {
-                if (key === "Clear") {
-                  resetGrid();
-                } else if (key === "=") {
-                  // You'll handle the equals logic in the parent component
-                  onButtonClick(key);
-                } else if (key === "DEL") {
+                if (key === "DEL") {
                   onButtonClick(key);
                 } else {
                   onButtonClick(key);
@@ -37,6 +44,12 @@ const ButtonGrid: React.FC<ButtonGridProps> = ({
           ))}
         </div>
       ))}
+      <div className="flex space-x-4">
+        {/* Reset */}
+        <Button onClick={handleReset} label="Reset" className="w-full" />
+        {/* Equals */}
+        <Button onClick={handleEquals} label="=" className="w-full" />
+      </div>
     </div>
   );
 };

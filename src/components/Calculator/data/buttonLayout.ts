@@ -4,6 +4,4 @@ export const buttonLayout = [
   ["4", "5", "6", "+"],
   ["1", "2", "3", "-"],
   [".", "0", "/", "x"],
-  ["="], // Equal button on its own row
-  ["Clear"], // Clear button on its own row
 ];

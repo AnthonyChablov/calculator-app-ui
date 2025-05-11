@@ -20,7 +20,7 @@ const Button: React.FC<ButtonProps> = ({
   ...rest
 }) => {
   const buttonClassName = cn(
-    "hover:cursor-pointer hover:bg- inline-flex items-center justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-black shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2",
+    "hover:cursor-pointer hover:bg- inline-flex items-center justify-center rounded-md border border-gray-300 bg-white px-3 py-3 text-sm font-medium text-black shadow-sm  hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2",
     className
   );
 
@@ -32,7 +32,7 @@ const Button: React.FC<ButtonProps> = ({
       aria-describedby={ariaDescribedByProp}
       {...rest}
     >
-      <ParagraphText className="" text={label}>
+      <ParagraphText className="font-semibold" size="2xl" text={label}>
         {" "}
       </ParagraphText>
     </button>

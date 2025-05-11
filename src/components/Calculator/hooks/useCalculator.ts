@@ -5,15 +5,7 @@ const useCalculator = () => {
   const [expression, setExpression] = useState("");
 
   const handleButtonClick = (value: string) => {
-    if (value === "=") {
-      try {
-        const parser = new Parser();
-        const expr = parser.parse(expression.replace("x", "*"));
-        setExpression(String(expr.evaluate()));
-      } catch (error: any) {
-        setExpression("Error");
-      }
-    } else if (value === "DEL") {
+    if (value === "DEL") {
       setExpression((prevExpression) => prevExpression.slice(0, -1));
     } else if (["+", "-", "*", "/"].includes(value)) {
       // Prevent consecutive operators and operators at the beginning
@@ -41,10 +33,21 @@ const useCalculator = () => {
     setExpression("");
   };
 
+  const onEvaluate = () => {
+    try {
+      const parser = new Parser();
+      const expr = parser.parse(expression.replace("x", "*"));
+      setExpression(String(expr.evaluate()));
+    } catch (error: any) {
+      setExpression("Error");
+    }
+  };
+
   return {
     expression,
     handleButtonClick,
     handleReset,
+    onEvaluate,
   };
 };
 

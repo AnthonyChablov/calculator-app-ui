@@ -6,7 +6,8 @@ import ButtonGrid from "./components/Buttons/ButtonGrid";
 import useCalculator from "./hooks/useCalculator";
 
 const Calculator = () => {
-  const { expression, handleButtonClick, handleReset } = useCalculator();
+  const { expression, handleButtonClick, handleReset, onEvaluate } =
+    useCalculator();
 
   return (
     <>
@@ -14,8 +15,12 @@ const Calculator = () => {
         <Header />
         <Separator size="small" />
         <Display value={expression} />
-        <Separator size="medium" />
-        <ButtonGrid onButtonClick={handleButtonClick} resetGrid={handleReset} />
+        <Separator size="small" />
+        <ButtonGrid
+          onButtonClick={handleButtonClick}
+          resetGrid={handleReset}
+          onEvaluate={onEvaluate}
+        />
       </Container>
     </>
   );
