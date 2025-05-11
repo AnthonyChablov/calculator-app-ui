@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Parser } from "expr-eval";
 
-const OPERATORS = ["+", "-", "*", "/", "x"];
+const OPERATORS: string[] = ["+", "-", "*", "/"];
 
 const useCalculator = () => {
   const [expression, setExpression] = useState("");
@@ -21,21 +21,33 @@ const useCalculator = () => {
         expression &&
         !OPERATORS.includes(expression.slice(-1))
       ) {
-        setExpression(
-          (prevExpression) => prevExpression + value.replace("x", "*")
-        );
+        setExpression((prevExpression) => prevExpression + value);
       }
     } else if (value === ".") {
       const lastNumber = expression.split(/[\+\-\*\/]/).pop();
       if (lastNumber && !lastNumber.includes(".")) {
         setExpression((prevExpression) => prevExpression + value);
       } else if (!expression) {
-        setExpression("0.");
+        setExpression(".");
       }
     } else if (value === "Clear") {
       setExpression("");
+    } else if (value === "x") {
+      if (expression && !OPERATORS.includes(expression.slice(-1))) {
+        setExpression((prevExpression) => prevExpression + "*");
+      }
     } else {
-      setExpression((prevExpression) => prevExpression + value);
+      // Prevent leading zeros unless it's a single zero or followed by a decimal
+      if (value === "0" && !expression) {
+        return;
+      }
+      if (
+        !expression.endsWith("0") ||
+        expression.endsWith("0.") ||
+        OPERATORS.includes(expression.slice(-1))
+      ) {
+        setExpression((prevExpression) => prevExpression + value);
+      }
     }
   };
 
@@ -47,7 +59,7 @@ const useCalculator = () => {
     if (!expression) return;
     try {
       const parser = new Parser();
-      const expr = parser.parse(expression.replace("x", "*"));
+      const expr = parser.parse(expression);
       setExpression(String(expr.evaluate()));
     } catch (error: any) {
       setExpression("Error");
