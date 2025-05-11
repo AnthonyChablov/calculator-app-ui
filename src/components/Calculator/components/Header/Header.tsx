@@ -1,11 +1,21 @@
 import Toggle from "./Toggle/Toggle";
 import HeaderText from "@/components/Typography/HeaderText/HeaderText";
+import { cn } from "@/lib/utils";
 
-const Header = () => {
+interface HeaderProps {
+  className?: string;
+  headerTitle: string;
+  toggleTitle?: string | undefined;
+}
+
+const Header = ({ className, headerTitle, toggleTitle }: HeaderProps) => {
   return (
-    <div className="flex items-center justify-between ">
-      <HeaderText header="calc" className=" text-xl" />
-      <Toggle title="THEME" />
+    <div
+      className={cn(`flex items-center justify-between w-full p-4 `, className)}
+      data-testid="calculator-header"
+    >
+      <HeaderText header={headerTitle} className=" text-xl" />
+      <Toggle title={toggleTitle} />
     </div>
   );
 };
