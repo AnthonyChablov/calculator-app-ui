@@ -1,4 +1,4 @@
-import Container from "../Layout/Separator/Container/Container";
+import Container from "../Layout/Container/Container";
 import Header from "./components/Header/Header";
 import Display from "./components/Display/Display";
 import Separator from "../Layout/Separator/Separator";
