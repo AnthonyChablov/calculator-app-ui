@@ -1,12 +1,10 @@
-import { defineConfig, type UserConfig } from "vite";
-import react from "@vitejs/plugin-react-swc";
-import tailwindcss from "@tailwindcss/vite";
+import { defineConfig } from "vitest/config";
+import react from "@vitejs/plugin-react";
 import { resolve } from "path";
 import tsconfigPaths from "vite-tsconfig-paths";
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss(), tsconfigPaths()],
+  plugins: [react(), tsconfigPaths()],
   test: {
     environment: "jsdom",
     globals: true,
@@ -19,4 +17,4 @@ export default defineConfig({
   resolve: {
     alias: [{ find: "@", replacement: resolve(__dirname, "./src") }],
   },
-} as UserConfig);
+});
