@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ParagraphText from "@/components/Typography/ParagraphText/ParagraphText";
+import { cn } from "@/lib/utils";
 
 interface ToggleProps {
   onThemeChange?: (themeNumber: number) => void;
@@ -7,7 +8,7 @@ interface ToggleProps {
   title?: string;
 }
 
-const MultiToggle: React.FC<ToggleProps> = ({
+const Toggle: React.FC<ToggleProps> = ({
   onThemeChange,
   initialTheme = 1,
   title,
@@ -36,7 +37,7 @@ const MultiToggle: React.FC<ToggleProps> = ({
             className="relative flex items-center justify-center w-8 h-8"
           >
             <ParagraphText
-              text={String(theme)}
+              text={`${theme}`}
               className="text-gray-600 dark:text-gray-300 px-2 uppercase text-sm 
                 font-semibold absolute transform left-1 -translate-y-8"
             />
@@ -56,4 +57,4 @@ const MultiToggle: React.FC<ToggleProps> = ({
   );
 };
 
-export default MultiToggle;
+export default Toggle;
