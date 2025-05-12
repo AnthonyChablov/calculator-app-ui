@@ -9,7 +9,11 @@ function App() {
   const { getThemeClass } = useThemeStore();
 
   return (
-    <div className={cn(`font-sans h-screen ${getThemeClass("bg")}`)}>
+    <div
+      className={cn(
+        `font-sans h-screen ${getThemeClass("bg")} transition-all duration-500 ease-in-out`
+      )}
+    >
       <Calculator />
     </div>
   );

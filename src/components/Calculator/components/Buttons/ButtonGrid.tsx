@@ -73,7 +73,7 @@ const ButtonGrid = ({
                 `${getThemeClass("textSecondary")} 
                 ${getThemeClass("keyBgNeutral")} 
                 ${getThemeClass("keyShadow")} 
-                ${key === "DEL" && `${getThemeClass("keyBg")} `}`
+                ${key === "DEL" && `${getThemeClass("keyBg")} ${getThemeClass("textPrimary")}`}`
               )}
               key={key}
               label={key}

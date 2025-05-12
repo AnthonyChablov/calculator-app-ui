@@ -40,7 +40,7 @@ const Toggle = ({ onThemeChange, initialTheme, title }: ToggleProps) => {
   return (
     <div
       className="flex items-center justify-center space-x-6 transition-all duration-300 ease-in-out
-                  hover:scale-110"
+                  hover:scale-105"
     >
       {title && (
         <ParagraphText
@@ -75,7 +75,7 @@ const Toggle = ({ onThemeChange, initialTheme, title }: ToggleProps) => {
             <button
               onClick={() => handleToggle(theme)}
               className={`w-6 h-6 rounded-full
-                  flex items-center justify-center focus:outline-none
+                  flex items-center justify-center focus:outline-none 
                   ${
                     initialTheme === theme
                       ? `${getThemeClass("keyBgAccent")} hover:shadow-lg`
