@@ -2,6 +2,7 @@ import React from "react";
 import ParagraphText from "@/components/Typography/ParagraphText/ParagraphText";
 import { useThemeStore } from "@/store/useThemeStore";
 import { cn } from "@/utils/utils";
+import { get } from "http";
 
 interface ToggleProps {
   onThemeChange?: (newTheme: number) => void;
@@ -48,7 +49,14 @@ const Toggle = ({ onThemeChange, initialTheme, title }: ToggleProps) => {
           `)}
         />
       )}
-      <div className="inline-flex rounded-full shadow-sm bg-gray-200 dark:bg-gray-700 relative">
+      <div
+        className={cn(
+          `inline-flex rounded-full shadow-sm bg-gray-200 dark:bg-gray-700 relative 
+            ${getThemeClass("bgToggleKeypad")} 
+            ${getThemeClass("keyShadow")}
+          `
+        )}
+      >
         {THEMES.map((theme) => (
           <div
             key={theme}
@@ -68,7 +76,7 @@ const Toggle = ({ onThemeChange, initialTheme, title }: ToggleProps) => {
                   flex items-center justify-center  focus:outline-none
                   transition-all duration-300 ease-in-out ${
                     initialTheme === theme
-                      ? "bg-indigo-500  dark:bg-indigo-600 shadow-sm"
+                      ? ` shadow-sm ${getThemeClass("keyBgAccent")}`
                       : ""
                   }`}
             ></button>
