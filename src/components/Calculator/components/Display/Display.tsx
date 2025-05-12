@@ -29,11 +29,14 @@ const Display = ({
     <div
       data-testid={dataTestId}
       className={cn(
-        `bg-gray-200 dark:bg-gray-700  rounded-lg shadow-md flex items-center justify-start px-6 pt-6 pb-2
+        `bg-gray-200 dark:bg-gray-700  rounded-lg shadow-md  px-6 pt-6 pb-0
           ${className}`
       )}
     >
-      <div ref={displayRef} className="max-w-2xl overflow-x-auto w-full h-36 ">
+      <div
+        ref={displayRef}
+        className="max-w-2xl overflow-x-auto w-full h-36 text-right"
+      >
         <ParagraphText
           text={value || error}
           className="text-gray-800 dark:text-gray-200 text-5xl font-semibold whitespace-nowrap"
