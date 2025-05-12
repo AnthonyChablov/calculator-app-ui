@@ -6,6 +6,9 @@ import ButtonGrid from "./components/Buttons/ButtonGrid";
 import useCalculator from "./hooks/useCalculator";
 import { useThemeStore } from "@/store/useThemeStore";
 
+const HEADER_TITLE = "calc.";
+const TOGGLE_TITLE = "THEME";
+
 const Calculator = () => {
   /**
    * useCalculator is a custom hook that manages the state and behavior of a calculator application.
@@ -41,8 +44,8 @@ const Calculator = () => {
     <>
       <Container className="pt-10" dataTestId="calculator">
         <Header
-          headerTitle="calc."
-          toggleTitle="THEME"
+          headerTitle={HEADER_TITLE}
+          toggleTitle={TOGGLE_TITLE}
           currentTheme={theme}
           onThemeChange={handleThemeChange}
         />
