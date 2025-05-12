@@ -29,7 +29,7 @@ const Display = ({
     <div
       data-testid={dataTestId}
       className={cn(
-        `bg-gray-200 dark:bg-gray-700  rounded-lg shadow-md  px-6 pt-6 pb-0
+        `bg-gray-200 dark:bg-gray-700 rounded-xl shadow-md px-6 pt-6 pb-0
           ${className}`
       )}
     >

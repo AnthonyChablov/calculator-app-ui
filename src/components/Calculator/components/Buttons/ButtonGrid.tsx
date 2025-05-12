@@ -27,7 +27,7 @@ const ButtonGrid = ({
 
   return (
     <div
-      className="p-8 bg-slate-800 rounded-lg shadow-md"
+      className="p-8 bg-slate-800 rounded-xl shadow-md"
       data-testid="calculator-button-grid"
     >
       {buttonLayout.map((row, rowIndex) => (
