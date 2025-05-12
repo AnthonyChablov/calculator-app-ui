@@ -18,9 +18,20 @@ const Calculator = () => {
   const { expression, handleButtonClick, handleReset, onEvaluate } =
     useCalculator();
 
-  /* Zustand Theme State */
+  /**
+   * useThemeStore is a Zustand store hook that provides access to the theme state and setter function.
+   * It allows components to read and update the theme value.
+   *
+   * @returns {Object} - An object containing the current theme and a function to set the theme.
+   * */
   const { theme, setTheme } = useThemeStore();
 
+  /**
+   * handleThemeChange is a function that handles the theme change action.
+   * It updates the theme state in the Zustand store.
+   *
+   * @param {number} newTheme - The new theme value to set.
+   */
   const handleThemeChange = (newTheme: number) => {
     setTheme(newTheme); // Call the setter function to update the theme
     console.log("Theme changed to:", newTheme); // Optional: Log the change
