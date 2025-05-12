@@ -5,6 +5,7 @@ import Separator from "../Layout/Separator/Separator";
 import ButtonGrid from "./components/Buttons/ButtonGrid";
 import useCalculator from "./hooks/useCalculator";
 import { useThemeStore } from "@/store/useThemeStore";
+import { cn } from "@/utils/utils";
 
 const HEADER_TITLE = "calc.";
 const TOGGLE_TITLE = "THEME";
@@ -41,8 +42,8 @@ const Calculator = () => {
   };
 
   return (
-    <>
-      <Container className="pt-10" dataTestId="calculator">
+    <div className={cn(`   `)}>
+      <Container className="pt-10 " dataTestId="calculator">
         <Header
           headerTitle={HEADER_TITLE}
           toggleTitle={TOGGLE_TITLE}
@@ -59,7 +60,7 @@ const Calculator = () => {
           currentTheme={theme}
         />
       </Container>
-    </>
+    </div>
   );
 };
 
