@@ -16,6 +16,7 @@ describe("ButtonGrid.tsx", () => {
         onButtonClick={mockOnButtonClick}
         resetGrid={mockResetGrid}
         onEvaluate={mockOnEvaluate}
+        currentTheme={1}
       />
     );
     const buttonGrid = screen.getByTestId("calculator-button-grid");
@@ -31,6 +32,7 @@ describe("ButtonGrid.tsx", () => {
         onButtonClick={mockOnButtonClick}
         resetGrid={mockResetGrid}
         onEvaluate={mockOnEvaluate}
+        currentTheme={1}
       />
     );
     const buttonGrid = screen.getByTestId("calculator-button-grid");
@@ -46,6 +48,7 @@ describe("ButtonGrid.tsx", () => {
         onButtonClick={mockOnButtonClick}
         resetGrid={mockResetGrid}
         onEvaluate={mockOnEvaluate}
+        currentTheme={1}
       />
     );
     const buttonGrid = screen.getByTestId("calculator-button-grid");
@@ -61,6 +64,7 @@ describe("ButtonGrid.tsx", () => {
         onButtonClick={mockOnButtonClick}
         resetGrid={mockResetGrid}
         onEvaluate={mockOnEvaluate}
+        currentTheme={1}
       />
     );
     const buttons = screen.getAllByRole("button");
@@ -76,6 +80,7 @@ describe("ButtonGrid.tsx", () => {
         onButtonClick={mockOnButtonClick}
         resetGrid={mockResetGrid}
         onEvaluate={mockOnEvaluate}
+        currentTheme={1}
       />
     );
     const button = screen.getByText("1");
@@ -95,6 +100,7 @@ describe("ButtonGrid.tsx", () => {
         onButtonClick={mockOnButtonClick}
         resetGrid={mockResetGrid}
         onEvaluate={mockOnEvaluate}
+        currentTheme={1}
       />
     );
     const resetButton = screen.getByText("Reset");
@@ -113,6 +119,7 @@ describe("ButtonGrid.tsx", () => {
         onButtonClick={mockOnButtonClick}
         resetGrid={mockResetGrid}
         onEvaluate={mockOnEvaluate}
+        currentTheme={1}
       />
     );
     const equalsButton = screen.getByText("=");
@@ -131,6 +138,7 @@ describe("ButtonGrid.tsx", () => {
         onButtonClick={mockOnButtonClick}
         resetGrid={mockResetGrid}
         onEvaluate={mockOnEvaluate}
+        currentTheme={1}
       />
     );
     const equalsButton = screen.getByText("=");
@@ -148,6 +156,7 @@ describe("ButtonGrid.tsx", () => {
         onButtonClick={mockOnButtonClick}
         resetGrid={mockResetGrid}
         onEvaluate={mockOnEvaluate}
+        currentTheme={1}
       />
     );
     const delButton = screen.getByText("DEL");
@@ -163,6 +172,7 @@ describe("ButtonGrid.tsx", () => {
         onButtonClick={mockOnButtonClick}
         resetGrid={mockResetGrid}
         onEvaluate={mockOnEvaluate}
+        currentTheme={1}
       />
     );
     const button = screen.getByText("4");
