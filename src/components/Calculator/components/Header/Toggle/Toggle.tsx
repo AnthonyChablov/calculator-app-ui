@@ -2,7 +2,6 @@ import React from "react";
 import ParagraphText from "@/components/Typography/ParagraphText/ParagraphText";
 import { useThemeStore } from "@/store/useThemeStore";
 import { cn } from "@/utils/utils";
-import { get } from "http";
 
 interface ToggleProps {
   onThemeChange?: (newTheme: number) => void;
@@ -39,46 +38,55 @@ const Toggle = ({ onThemeChange, initialTheme, title }: ToggleProps) => {
   };
 
   return (
-    <div className="flex items-center justify-center space-x-6">
+    <div
+      className="flex items-center justify-center space-x-6 transition-all duration-300 ease-in-out
+                  hover:scale-110"
+    >
       {title && (
         <ParagraphText
           text={title}
-          className={cn(` text-gray-600 dark:text-gray-300 
-            px-2 uppercase text-sm font-semibold 
-            ${getThemeClass("textPrimary")}
-          `)}
+          className={cn(` text-gray-600 dark:text-gray-300
+              px-2 uppercase text-sm font-semibold
+              ${getThemeClass("textPrimary")}
+            `)}
         />
       )}
       <div
         className={cn(
           `inline-flex rounded-full shadow-sm bg-gray-200 dark:bg-gray-700 relative 
-            ${getThemeClass("bgToggleKeypad")} 
-            ${getThemeClass("keyShadow")}
-          `
+              ${getThemeClass("bgToggleKeypad")}
+              ${getThemeClass("keyShadow")}
+            `
         )}
       >
         {THEMES.map((theme) => (
           <div
             key={theme}
-            className="relative flex items-center justify-center w-8 h-8"
+            className="relative flex items-center justify-center w-8 h-8 "
           >
             <ParagraphText
               text={`${theme}`}
               className={cn(`
                   px-2 uppercase text-sm
-                  font-semibold absolute transform left-1 -translate-y-8  
+                  font-semibold absolute transform left-1 -translate-y-8
                   ${getThemeClass("textPrimary")}
-              `)}
+                `)}
             />
             <button
               onClick={() => handleToggle(theme)}
-              className={`w-6 h-6 hover:cursor-pointer rounded-full
-                  flex items-center justify-center  focus:outline-none
-                  transition-all duration-300 ease-in-out ${
+              className={`w-6 h-6 rounded-full
+                  flex items-center justify-center focus:outline-none
+                  ${
                     initialTheme === theme
-                      ? ` shadow-sm ${getThemeClass("keyBgAccent")}`
-                      : ""
-                  }`}
+                      ? `${getThemeClass("keyBgAccent")} hover:shadow-lg`
+                      : ``
+                  }
+                  hover:cursor-pointer
+                `}
+              style={{
+                backgroundColor:
+                  initialTheme === theme ? undefined : getThemeClass("keyBg"),
+              }}
             ></button>
           </div>
         ))}

@@ -20,7 +20,14 @@ const Button: React.FC<ButtonProps> = ({
   ...rest
 }) => {
   const buttonClassName = cn(
-    "hover:cursor-pointer hover:bg- inline-flex items-center justify-center rounded-md border border-gray-300 bg-white px-3 py-3 text-sm font-medium text-black shadow-sm  hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2",
+    ` hover:cursor-pointer outline-none 
+      inline-flex items-center justify-center 
+      rounded-md  px-3 py-3 text-sm font-medium text-black shadow-sm 
+      hover:bg-gray-50 focus:outline-none focus:ring-2 
+      focus:ring-indigo-500 focus:ring-offset-2
+      transition-all duration-300 ease-in-out
+      hover:scale-110
+    `,
     className
   );
 
