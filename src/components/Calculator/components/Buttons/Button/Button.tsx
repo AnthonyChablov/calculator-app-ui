@@ -1,5 +1,5 @@
 import { type ClassValue } from "clsx";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils/utils";
 import ParagraphText from "@/components/Typography/ParagraphText/ParagraphText";
 
 interface ButtonProps {

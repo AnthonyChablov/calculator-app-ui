@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "./Button/Button";
 import { buttonLayout } from "../../data/buttonLayout";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils/utils";
 
 interface ButtonGridProps {
   onButtonClick: (value: string) => void; // Now the button click passes the button's value

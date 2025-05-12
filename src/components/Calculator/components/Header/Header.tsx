@@ -1,6 +1,6 @@
 import Toggle from "./Toggle/Toggle";
 import HeaderText from "@/components/Typography/HeaderText/HeaderText";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils/utils";
 
 interface HeaderProps {
   className?: string;

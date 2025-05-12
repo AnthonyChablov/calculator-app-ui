@@ -1,5 +1,5 @@
 import ParagraphText from "@/components/Typography/ParagraphText/ParagraphText";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils/utils";
 
 interface DisplayProps {
   className?: string;
