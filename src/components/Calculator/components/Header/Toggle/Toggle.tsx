@@ -10,6 +10,12 @@ interface ToggleProps {
 const THEMES = [1, 2, 3];
 
 const Toggle = ({ onThemeChange, initialTheme, title }: ToggleProps) => {
+  /**
+   * handleToggle is a function that handles the theme toggle action.
+   * It calls the onThemeChange function passed as a prop with the new theme value.
+   *
+   * @param {number} newTheme - The new theme value to set.
+   */
   const handleToggle = (newTheme: number) => {
     onThemeChange && onThemeChange(newTheme); // Call the Zustand setter passed down
   };
