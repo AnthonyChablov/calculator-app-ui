@@ -53,7 +53,6 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  --bg-toggle-keypad: #e5ffcc;
   /* Theme 1 */
   --color-theme-1-bg: hsl(222, 26%, 31%);
   --color-theme-1-bg-toggle-keypad: hsl(223, 31%, 20%);
@@ -64,8 +63,8 @@
   --color-theme-1-key-shadow-accent: 0 0.2rem hsl(6, 70%, 34%);
   --color-theme-1-key-bg-neutral: hsl(30, 25%, 89%);
   --color-theme-1-key-shadow-neutral: 0 0.2rem hsl(28, 16%, 65%);
-  --color-theme-1-text-primary: hsl(221, 14%, 31%);
-  --color-theme-1-text-secondary: hsl(0, 0%, 100%);
+  --color-theme-1-text-primary: hsl(0, 0%, 100%);
+  --color-theme-1-text-secondary: hsl(221, 14%, 31%);
 
   /* Theme 2 */
   --color-theme-2-bg: (hsl(0, 0%, 90%));
@@ -78,7 +77,7 @@
   --color-theme-2-key-bg-neutral: hsl(45, 7%, 89%);
   --color-theme-2-key-shadow-neutral: 0 0.2rem hsl(35, 11%, 61%);
   --color-theme-2-text-primary: hsl(60, 10%, 19%);
-  --color-theme-2-text-secondary: hsl(0, 0%, 100%);
+  --color-theme-2-text-secondary: #38382e;
 
   /* Theme 3 */
   --color-theme-3-bg: hsl(268, 75%, 9%);

@@ -5,11 +5,11 @@ import { cn } from "@/utils/utils";
 import { themeStyles } from "./store/themeVariables/themeVariables";
 
 function App() {
-  // Get the theme styles for the background
-  const { getBgClassName } = useThemeStore();
+  // Get the theme styles from the store
+  const { getThemeClass } = useThemeStore();
 
   return (
-    <div className={cn(`font-sans ${getBgClassName()} h-screen`)}>
+    <div className={cn(`font-sans h-screen ${getThemeClass("bg")}`)}>
       <Calculator />
     </div>
   );

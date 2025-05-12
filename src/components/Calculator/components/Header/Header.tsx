@@ -1,6 +1,7 @@
 import Toggle from "./Toggle/Toggle";
 import HeaderText from "@/components/Typography/HeaderText/HeaderText";
 import { cn } from "@/utils/utils";
+import { useThemeStore } from "@/store/useThemeStore";
 
 interface HeaderProps {
   className?: string;
@@ -17,12 +18,19 @@ const Header = ({
   currentTheme,
   onThemeChange,
 }: HeaderProps) => {
+  /// Get the theme class from the store
+  /// This is used to apply the theme styles to the header
+  const { getThemeClass } = useThemeStore();
+
   return (
     <div
-      className={cn(`flex items-center justify-between w-full `, className)}
+      className={cn(`flex items-center justify-between w-full  `, className)}
       data-testid="calculator-header"
     >
-      <HeaderText header={headerTitle} className=" text-2xl font-semibold" />
+      <HeaderText
+        header={headerTitle}
+        className={`text-2xl font-semibold ${getThemeClass("textPrimary")}`}
+      />
       <Toggle
         title={toggleTitle}
         initialTheme={currentTheme} // Pass the current theme to Toggle

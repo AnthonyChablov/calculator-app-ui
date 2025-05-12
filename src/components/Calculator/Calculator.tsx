@@ -29,7 +29,7 @@ const Calculator = () => {
    *
    * @returns {Object} - An object containing the current theme and a function to set the theme.
    * */
-  const { theme, setTheme } = useThemeStore();
+  const { theme, setTheme, getThemeClass } = useThemeStore();
 
   /**
    * handleThemeChange is a function that handles the theme change action.
@@ -38,8 +38,7 @@ const Calculator = () => {
    * @param {number} newTheme - The new theme value to set.
    */
   const handleThemeChange = (newTheme: number) => {
-    setTheme(newTheme); // Call the setter function to update the theme
-    console.log("Theme changed to:", newTheme); // Optional: Log the change
+    setTheme(newTheme);
   };
 
   return (

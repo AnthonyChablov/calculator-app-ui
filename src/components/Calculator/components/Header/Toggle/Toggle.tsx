@@ -1,5 +1,7 @@
 import React from "react";
 import ParagraphText from "@/components/Typography/ParagraphText/ParagraphText";
+import { useThemeStore } from "@/store/useThemeStore";
+import { cn } from "@/utils/utils";
 
 interface ToggleProps {
   onThemeChange?: (newTheme: number) => void;
@@ -10,6 +12,21 @@ interface ToggleProps {
 const THEMES = [1, 2, 3];
 
 const Toggle = ({ onThemeChange, initialTheme, title }: ToggleProps) => {
+  /**
+   * useThemeStore is a custom hook that provides access to the theme store.
+   * It allows you to get the current theme and set a new theme.
+   */
+  /// Get the theme class from the store
+  /// This is used to apply the theme styles to the header
+  /**
+   * getThemeClass is a function that returns the theme class based on the current theme.
+   * It is used to apply the appropriate styles to the toggle button.
+   *
+   * @param {string} key - The key for the theme variable.
+   * @returns {string} - The class name for the theme variable.
+   */
+  const { getThemeClass } = useThemeStore();
+
   /**
    * handleToggle is a function that handles the theme toggle action.
    * It calls the onThemeChange function passed as a prop with the new theme value.
@@ -25,7 +42,10 @@ const Toggle = ({ onThemeChange, initialTheme, title }: ToggleProps) => {
       {title && (
         <ParagraphText
           text={title}
-          className="text-gray-600 dark:text-gray-300 px-2 uppercase text-sm font-semibold"
+          className={cn(` text-gray-600 dark:text-gray-300 
+            px-2 uppercase text-sm font-semibold 
+            ${getThemeClass("textPrimary")}
+          `)}
         />
       )}
       <div className="inline-flex rounded-full shadow-sm bg-gray-200 dark:bg-gray-700 relative">
@@ -36,16 +56,19 @@ const Toggle = ({ onThemeChange, initialTheme, title }: ToggleProps) => {
           >
             <ParagraphText
               text={`${theme}`}
-              className="text-gray-600 dark:text-gray-300 px-2 uppercase text-sm
-                  font-semibold absolute transform left-1 -translate-y-8"
+              className={cn(`
+                  px-2 uppercase text-sm
+                  font-semibold absolute transform left-1 -translate-y-8  
+                  ${getThemeClass("textPrimary")}
+              `)}
             />
             <button
               onClick={() => handleToggle(theme)}
               className={`w-6 h-6 hover:cursor-pointer rounded-full
-                  flex items-center justify-center text-gray-600 dark:text-gray-300 focus:outline-none
+                  flex items-center justify-center  focus:outline-none
                   transition-all duration-300 ease-in-out ${
                     initialTheme === theme
-                      ? "bg-indigo-500 text-white dark:bg-indigo-600 shadow-sm"
+                      ? "bg-indigo-500  dark:bg-indigo-600 shadow-sm"
                       : ""
                   }`}
             ></button>

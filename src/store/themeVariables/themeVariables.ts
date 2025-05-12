@@ -1,48 +1,50 @@
-import { cn } from "../../utils/utils";
-
 export const themeVariables = {
   bg: ["bg-theme-1-bg", "bg-theme-2-bg", "bg-theme-3-bg"],
   bgToggleKeypad: [
-    "theme-1-bg-toggle-keypad",
-    "theme-2-bg-toggle-keypad",
-    "theme-3-bg-toggle-keypad",
+    "bg-theme-1-bg-toggle-keypad",
+    "bg-theme-2-bg-toggle-keypad",
+    "bg-theme-3-bg-toggle-keypad",
   ],
   bgScreen: [
     "bg-theme-1-bg-screen",
     "bg-theme-2-bg-screen",
     "bg-theme-3-bg-screen",
   ],
-  keyBg: ["theme-1-key-bg", "theme-2-key-bg", "theme-3-key-bg"],
-  keyShadow: ["theme-1-key-shadow", "theme-2-key-shadow", "theme-3-key-shadow"],
+  keyBg: ["bg-theme-1-key-bg", "bg-theme-2-key-bg", "bg-theme-3-key-bg"],
+  keyShadow: [
+    "shadow-theme-1-key-shadow",
+    "shadow-theme-2-key-shadow",
+    "shadow-theme-3-key-shadow",
+  ],
   keyBgAccent: [
-    "theme-1-key-bg-accent",
-    "theme-2-key-bg-accent",
-    "theme-3-key-bg-accent",
+    "bg-theme-1-key-bg-accent",
+    "bg-theme-2-key-bg-accent",
+    "bg-theme-3-key-bg-accent",
   ],
   keyShadowAccent: [
-    "theme-1-key-shadow-accent",
-    "theme-2-key-shadow-accent",
-    "theme-3-key-shadow-accent",
+    "shadow-theme-1-key-shadow-accent",
+    "shadow-theme-2-key-shadow-accent",
+    "shadow-theme-3-key-shadow-accent",
   ],
   keyBgNeutral: [
-    "theme-1-key-bg-neutral",
-    "theme-2-key-bg-neutral",
-    "theme-3-key-bg-neutral",
+    "bg-theme-1-key-bg-neutral",
+    "bg-theme-2-key-bg-neutral",
+    "bg-theme-3-key-bg-neutral",
   ],
   keyShadowNeutral: [
-    "theme-1-key-shadow-neutral",
-    "theme-2-key-shadow-neutral",
-    "theme-3-key-shadow-neutral",
+    "shadow-theme-1-key-shadow-neutral",
+    "shadow-theme-2-key-shadow-neutral",
+    "shadow-theme-3-key-shadow-neutral",
   ],
   textPrimary: [
-    "theme-1-text-primary",
-    "theme-2-text-primary",
-    "theme-3-text-primary",
+    "text-theme-1-text-primary",
+    "text-theme-2-text-primary",
+    "text-theme-3-text-primary",
   ],
   textSecondary: [
-    "theme-1-text-secondary",
-    "theme-2-text-secondary",
-    "theme-3-text-secondary",
+    "text-theme-1-text-secondary",
+    "text-theme-2-text-secondary",
+    "text-theme-3-text-secondary",
   ],
 };
 

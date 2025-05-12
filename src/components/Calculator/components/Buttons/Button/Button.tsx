@@ -32,7 +32,7 @@ const Button: React.FC<ButtonProps> = ({
       aria-describedby={ariaDescribedByProp}
       {...rest}
     >
-      <ParagraphText className="font-semibold" size="2xl" text={label}>
+      <ParagraphText className="font-semibold" size="3xl" text={label}>
         {" "}
       </ParagraphText>
     </button>

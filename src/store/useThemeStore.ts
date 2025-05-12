@@ -12,14 +12,12 @@ type ThemeStyleKey = keyof ReturnType<typeof themeStyles>;
 interface ThemeStore {
   theme: number;
   setTheme: (newTheme: number) => void;
-
-  // Method to get background class name
+  getThemeClass: (key: ThemeVariableKey) => string;
   getBgClassName: () => string;
 }
 
 export const useThemeStore = create<ThemeStore>((set, get) => ({
   theme: MIN_THEME_VALUE,
-
   setTheme: (newTheme) => {
     if (newTheme >= MIN_THEME_VALUE && newTheme <= MAX_THEME_VALUE) {
       set({ theme: newTheme });
@@ -29,7 +27,13 @@ export const useThemeStore = create<ThemeStore>((set, get) => ({
       );
     }
   },
-
+  // Flexible method to get theme class with optional prefix
+  getThemeClass: (key: ThemeVariableKey) => {
+    const { theme } = get();
+    const fullKey =
+      `${"color-theme"}-${key.replace(/([A-Z])/g, "-$1").toLowerCase()}` as ThemeStyleKey;
+    return themeStyles(theme)[fullKey];
+  },
   // Get the background class name
   getBgClassName: () => {
     const { theme } = get();
