@@ -42,8 +42,8 @@ const Calculator = () => {
   };
 
   return (
-    <div className={cn(`   `)}>
-      <Container className="pt-10 " dataTestId="calculator">
+    <div className={cn(``)}>
+      <Container className="py-10" dataTestId="calculator">
         <Header
           headerTitle={HEADER_TITLE}
           toggleTitle={TOGGLE_TITLE}
