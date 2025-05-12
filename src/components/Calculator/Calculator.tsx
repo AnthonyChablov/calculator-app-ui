@@ -4,6 +4,7 @@ import Display from "./components/Display/Display";
 import Separator from "../Layout/Separator/Separator";
 import ButtonGrid from "./components/Buttons/ButtonGrid";
 import useCalculator from "./hooks/useCalculator";
+import { useThemeStore } from "@/store/useThemeStore";
 
 const Calculator = () => {
   /**
@@ -17,17 +18,31 @@ const Calculator = () => {
   const { expression, handleButtonClick, handleReset, onEvaluate } =
     useCalculator();
 
+  /* Zustand Theme State */
+  const { theme, setTheme } = useThemeStore();
+
+  const handleThemeChange = (newTheme: number) => {
+    setTheme(newTheme); // Call the setter function to update the theme
+    console.log("Theme changed to:", newTheme); // Optional: Log the change
+  };
+
   return (
     <>
-      <Container className="pt-10  " dataTestId="calculator">
-        <Header headerTitle="calc" toggleTitle="THEME" />
+      <Container className="pt-10" dataTestId="calculator">
+        <Header
+          headerTitle="calc"
+          toggleTitle="THEME"
+          currentTheme={theme}
+          onThemeChange={handleThemeChange}
+        />
         <Separator size="small" />
-        <Display value={expression} />
+        <Display value={expression} currentTheme={theme} />
         <Separator size="small" />
         <ButtonGrid
           onButtonClick={handleButtonClick}
           resetGrid={handleReset}
           onEvaluate={onEvaluate}
+          currentTheme={theme}
         />
       </Container>
     </>

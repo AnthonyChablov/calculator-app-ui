@@ -7,12 +7,14 @@ interface ButtonGridProps {
   onButtonClick: (value: string) => void; // Now the button click passes the button's value
   resetGrid: () => void;
   onEvaluate: () => void; // Optional: If you want to handle equals separately
+  currentTheme: number; // Receive the current theme value
 }
 
 const ButtonGrid = ({
   onButtonClick,
   resetGrid,
   onEvaluate,
+  currentTheme,
 }: ButtonGridProps) => {
   function handleReset() {
     resetGrid();

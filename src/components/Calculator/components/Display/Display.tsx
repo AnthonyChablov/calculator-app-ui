@@ -6,6 +6,7 @@ interface DisplayProps {
   dataTestId?: string;
   value?: string | undefined;
   error?: string;
+  currentTheme: number; // Receive the current theme value
 }
 
 const Display = ({
@@ -13,6 +14,7 @@ const Display = ({
   dataTestId = "",
   value = "",
   error,
+  currentTheme,
 }: DisplayProps) => {
   return (
     <div

@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react"; // Import useEffect
 import ParagraphText from "@/components/Typography/ParagraphText/ParagraphText";
 
 interface ToggleProps {
-  onThemeChange?: (themeNumber: number) => void;
+  onThemeChange?: (newTheme: number) => void;
   initialTheme?: number;
   title?: string;
 }
@@ -12,9 +12,14 @@ const THEMES = [1, 2, 3];
 const Toggle = ({ onThemeChange, initialTheme = 1, title }: ToggleProps) => {
   const [activeTheme, setActiveTheme] = useState<number>(initialTheme);
 
-  const handleToggle = (themeNumber: number) => {
-    setActiveTheme(themeNumber);
-    onThemeChange && onThemeChange(themeNumber);
+  // Update local state when initialTheme prop changes (from Zustand)
+  useEffect(() => {
+    setActiveTheme(initialTheme);
+  }, [initialTheme]);
+
+  const handleToggle = (newTheme: number) => {
+    setActiveTheme(newTheme);
+    onThemeChange && onThemeChange(newTheme); // Call the Zustand setter passed down
   };
 
   return (
