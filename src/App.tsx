@@ -2,16 +2,14 @@ import React from "react";
 import Calculator from "./components/Calculator/Calculator";
 import { useThemeStore } from "@/store/useThemeStore";
 import { cn } from "@/utils/utils";
+import { themeStyles } from "./store/themeVariables/themeVariables";
 
 function App() {
-  /// useThemeStore is a Zustand store hook that provides access to the theme state and setter function.
-  const { theme, setTheme } = useThemeStore();
+  // Get the theme styles for the background
+  const { getBgClassName } = useThemeStore();
+
   return (
-    <div
-      className={cn(
-        `font-sans ${theme === 1 ? "bg-light" : theme === 2 ? "bg-dark" : "bg-blue-500"}`
-      )}
-    >
+    <div className={cn(`font-sans ${getBgClassName()} h-screen`)}>
       <Calculator />
     </div>
   );

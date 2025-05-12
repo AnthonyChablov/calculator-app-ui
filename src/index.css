@@ -68,7 +68,7 @@
   --color-theme-1-text-secondary: hsl(0, 0%, 100%);
 
   /* Theme 2 */
-  --color-theme-2-bg: var(hsl(0, 0%, 90%));
+  --color-theme-2-bg: (hsl(0, 0%, 90%));
   --color-theme-2-bg-toggle-keypad: hsl(0, 5%, 81%);
   --color-theme-2-bg-screen: hsl(0, 0%, 93%);
   --color-theme-2-key-bg: hsl(185, 42%, 37%);

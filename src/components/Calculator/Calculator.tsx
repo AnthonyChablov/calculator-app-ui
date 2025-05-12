@@ -5,6 +5,7 @@ import Separator from "../Layout/Separator/Separator";
 import ButtonGrid from "./components/Buttons/ButtonGrid";
 import useCalculator from "./hooks/useCalculator";
 import { useThemeStore } from "@/store/useThemeStore";
+import { themeStyles } from "@/store/themeVariables/themeVariables";
 import { cn } from "@/utils/utils";
 
 const HEADER_TITLE = "calc.";
