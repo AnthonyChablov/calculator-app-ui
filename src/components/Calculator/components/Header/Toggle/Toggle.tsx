@@ -28,7 +28,7 @@ const Toggle = ({ onThemeChange, initialTheme, title }: ToggleProps) => {
           className="text-gray-600 dark:text-gray-300 px-2 uppercase text-sm font-semibold"
         />
       )}
-      <div className="inline-flex rounded-full bg-gray-200 dark:bg-gray-700 relative">
+      <div className="inline-flex rounded-full shadow-sm bg-gray-200 dark:bg-gray-700 relative">
         {THEMES.map((theme) => (
           <div
             key={theme}
