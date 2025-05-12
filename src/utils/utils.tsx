@@ -2,21 +2,6 @@ import { twMerge } from "tailwind-merge"; // Merges Tailwind classes intelligent
 import { clsx, type ClassValue } from "clsx"; // Utility to conditionally join classNames.
 
 /**
- * Safely formats a date value into a localized string.
- *
- * @param value - A date-like value (e.g., string, number, Date, etc.)
- * @returns A locale-formatted date string or an empty string if the value is null or undefined.
- */
-export const formatDate = (value: any): string => {
-  if (value === null || value === undefined) {
-    return "";
-  }
-
-  const date = new Date(value);
-  return String(date.toLocaleDateString());
-};
-
-/**
  * Utility function to merge class names conditionally.
  *
  * Combines `clsx` for conditional className logic and `tailwind-merge`
