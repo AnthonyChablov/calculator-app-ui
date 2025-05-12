@@ -17,7 +17,7 @@ const Header = ({ className, headerTitle, toggleTitle }: HeaderProps) => {
       )}
       data-testid="calculator-header"
     >
-      <HeaderText header={headerTitle} className=" text-xl" />
+      <HeaderText header={headerTitle} className=" text-2xl font-semibold" />
       <Toggle title={toggleTitle} />
     </div>
   );
