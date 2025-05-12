@@ -41,7 +41,7 @@ const Calculator = () => {
     <>
       <Container className="pt-10" dataTestId="calculator">
         <Header
-          headerTitle="calc"
+          headerTitle="calc."
           toggleTitle="THEME"
           currentTheme={theme}
           onThemeChange={handleThemeChange}
