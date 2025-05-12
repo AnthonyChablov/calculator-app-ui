@@ -19,10 +19,7 @@ const Header = ({
 }: HeaderProps) => {
   return (
     <div
-      className={cn(
-        `flex items-center justify-between w-full py-2 `,
-        className
-      )}
+      className={cn(`flex items-center justify-between w-full `, className)}
       data-testid="calculator-header"
     >
       <HeaderText header={headerTitle} className=" text-2xl font-semibold" />
