@@ -11,7 +11,10 @@ interface HeaderProps {
 const Header = ({ className, headerTitle, toggleTitle }: HeaderProps) => {
   return (
     <div
-      className={cn(`flex items-center justify-between w-full p-4 `, className)}
+      className={cn(
+        `flex items-center justify-between w-full py-4 `,
+        className
+      )}
       data-testid="calculator-header"
     >
       <HeaderText header={headerTitle} className=" text-xl" />
