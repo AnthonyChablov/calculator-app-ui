@@ -13,7 +13,6 @@ interface ThemeStore {
   theme: number;
   setTheme: (newTheme: number) => void;
   getThemeClass: (key: ThemeVariableKey) => string;
-  getBgClassName: () => string;
 }
 
 export const useThemeStore = create<ThemeStore>((set, get) => ({
@@ -33,11 +32,5 @@ export const useThemeStore = create<ThemeStore>((set, get) => ({
     const fullKey =
       `${"color-theme"}-${key.replace(/([A-Z])/g, "-$1").toLowerCase()}` as ThemeStyleKey;
     return themeStyles(theme)[fullKey];
-  },
-  // Get the background class name
-  getBgClassName: () => {
-    const { theme } = get();
-    const themeClass = themeStyles(theme)["color-theme-bg"];
-    return themeClass;
   },
 }));
