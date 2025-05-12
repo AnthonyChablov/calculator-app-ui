@@ -19,10 +19,7 @@ const Calculator = () => {
 
   return (
     <>
-      <Container
-        className="py-10 px-4 md:px-8 lg:px-16 xl:px-24 2xl:px-32 "
-        dataTestId="calculator"
-      >
+      <Container className="py-10  " dataTestId="calculator">
         <Header headerTitle="calc" toggleTitle="THEME" />
         <Separator size="small" />
         <Display value={expression} />
