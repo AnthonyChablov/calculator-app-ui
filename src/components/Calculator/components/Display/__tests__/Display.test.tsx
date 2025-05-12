@@ -17,9 +17,14 @@ describe("Display.tsx", () => {
   it("should render with the correct className", () => {
     // Act
     render(
-      <Display value="123" className="test-class" currentTheme={defaultTheme} />
+      <Display
+        value="123"
+        dataTestId="display"
+        className="test-class"
+        currentTheme={defaultTheme}
+      />
     );
-    const display = screen.getByText(/123/).parentElement;
+    const display = screen.getByTestId(/display/);
 
     // Assert
     expect(display).toHaveClass(/test-class/);
