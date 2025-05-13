@@ -86,10 +86,13 @@ const ButtonGrid = ({
       <div className="flex space-x-4">
         {/* Reset */}
         <Button
-          className={` w-full ${getThemeClass("keyBg")} ${getThemeClass("textPrimary")}`}
+          className={`w-full 
+            ${getThemeClass("keyBg")} 
+            ${getThemeClass("textPrimary")}
+          `}
           onClick={handleReset}
           label="Reset"
-        />{" "}
+        />
         {/* Equals */}
         <Button
           className={` w-full ${getThemeClass("keyBgAccent")} ${getThemeClass("textPrimary")}`}

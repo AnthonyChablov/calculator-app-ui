@@ -10,7 +10,7 @@ function App() {
   return (
     <div
       className={cn(
-        `font-sans min-h-screen h-full ${getThemeClass("bg")} transition-all duration-400 ease-in-out`
+        `font-sans min-h-screen h-full  transition-all duration-500 ease-in-out ${getThemeClass("bg")}`
       )}
     >
       <Calculator />

@@ -76,8 +76,8 @@
   --color-theme-2-key-shadow-accent: 0 0.2rem hsl(25, 99%, 27%);
   --color-theme-2-key-bg-neutral: hsl(45, 7%, 89%);
   --color-theme-2-key-shadow-neutral: 0 0.2rem hsl(35, 11%, 61%);
-  --color-theme-2-text-primary: hsl(60, 10%, 19%);
-  --color-theme-2-text-secondary: #38382e;
+  --color-theme-2-text-primary: hsl(221, 14%, 31%);
+  --color-theme-2-text-secondary: hsl(0, 0%, 100%);
 
   /* Theme 3 */
   --color-theme-3-bg: hsl(268, 75%, 9%);

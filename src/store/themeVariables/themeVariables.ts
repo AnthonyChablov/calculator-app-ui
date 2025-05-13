@@ -37,9 +37,9 @@ export const themeVariables = {
     "shadow-theme-3-key-shadow-neutral",
   ],
   textPrimary: [
-    "text-theme-1-text-primary",
+    "text-theme-1-text-primary ",
     "text-theme-2-text-primary",
-    "text-theme-3-text-primary",
+    "text-theme-3-text-primary ",
   ],
   textSecondary: [
     "text-theme-1-text-secondary",
