@@ -182,9 +182,19 @@ const useCalculator = () => {
       // Return empty string if nothing to evaluate
       if (!expressionToEvaluate) return;
 
+      // Check for division by zero before evaluation
+      if (expressionToEvaluate.includes("/0")) {
+        throw new Error("Division by zero");
+      }
+
       const parser = new Parser();
       const expr = parser.parse(expressionToEvaluate);
       const result = expr.evaluate();
+
+      // Check for Infinity or NaN results
+      if (!isFinite(result) || isNaN(result)) {
+        throw new Error("Invalid result");
+      }
 
       // Format the result to avoid excessive decimal places
       // but preserve necessary precision
@@ -194,6 +204,7 @@ const useCalculator = () => {
 
       setExpression(formattedResult);
     } catch (error) {
+      console.error("Calculation error:", error);
       setExpression("Error");
 
       // Reset after showing error
