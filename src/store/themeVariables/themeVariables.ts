@@ -46,6 +46,7 @@ export const themeVariables = {
     "text-theme-2-text-secondary",
     "text-theme-3-text-secondary",
   ],
+  textWhite: ["text-theme-3-text-white"],
 };
 
 export const themeStyles = (theme: number) => {

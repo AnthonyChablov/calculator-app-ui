@@ -73,7 +73,13 @@ const ButtonGrid = ({
                 `${getThemeClass("textPrimary")} 
                 ${getThemeClass("keyBgNeutral")} 
                 ${getThemeClass("keyShadow")} 
-                ${key === "DEL" && `${getThemeClass("keyBg")} ${getThemeClass("textPrimary")}`}`
+                ${
+                  key === "DEL" &&
+                  `
+                    ${currentTheme && getThemeClass("keyBg")} 
+                    ${getThemeClass("textSecondary")}
+                  `
+                }`
               )}
               key={key}
               label={key}
@@ -88,14 +94,21 @@ const ButtonGrid = ({
         <Button
           className={`w-full 
             ${getThemeClass("keyBg")} 
-            ${getThemeClass("textPrimary")}
+            ${getThemeClass("textSecondary")}
           `}
           onClick={handleReset}
           label="Reset"
         />
         {/* Equals */}
         <Button
-          className={` w-full ${getThemeClass("keyBgAccent")} ${getThemeClass("textPrimary")}`}
+          className={`w-full 
+            ${getThemeClass("keyBgAccent")} 
+            ${
+              currentTheme === 3
+                ? getThemeClass("textWhite")
+                : getThemeClass("textSecondary")
+            }
+          `}
           onClick={handleEquals}
           label="="
         />

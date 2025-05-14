@@ -90,8 +90,8 @@
   --color-theme-3-key-bg-neutral: hsl(268, 47%, 21%);
   --color-theme-3-key-shadow-neutral: 0 0.2rem hsl(290, 70%, 36%);
   --color-theme-3-text-primary: hsl(52, 100%, 62%);
-  --color-theme-3-text-secondary: hsl(198, 20%, 13%);
-  --color-theme-3-text-white: hsl(0, 0%, 100%);
+  --color-theme-3-text-secondary: hsl(0, 0%, 100%);
+  --color-theme-3-text-white: hsl(198, 20%, 13%);
 }
 
 :root {
