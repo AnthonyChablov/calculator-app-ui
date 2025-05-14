@@ -29,7 +29,9 @@ const Header = ({
     >
       <HeaderText
         header={headerTitle}
-        className={`text-2xl font-semibold ${getThemeClass("textPrimary")}`}
+        className={`text-2xl font-semibold 
+          ${currentTheme === 1 && getThemeClass("textSecondary")} ${currentTheme === 2 && getThemeClass("textPrimary")} ${currentTheme === 3 && getThemeClass("textPrimary")}
+        `}
       />
       <Toggle
         title={toggleTitle}

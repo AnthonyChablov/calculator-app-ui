@@ -63,8 +63,8 @@
   --color-theme-1-key-shadow-accent: 0 0.2rem hsl(6, 70%, 34%);
   --color-theme-1-key-bg-neutral: hsl(30, 25%, 89%);
   --color-theme-1-key-shadow-neutral: 0 0.2rem hsl(28, 16%, 65%);
-  --color-theme-1-text-primary: hsl(0, 0%, 100%);
-  --color-theme-1-text-secondary: hsl(221, 14%, 31%);
+  --color-theme-1-text-primary: hsl(221, 14%, 31%);
+  --color-theme-1-text-secondary: hsl(0, 0%, 100%);
 
   /* Theme 2 */
   --color-theme-2-bg: (hsl(0, 0%, 90%));
@@ -76,7 +76,7 @@
   --color-theme-2-key-shadow-accent: 0 0.2rem hsl(25, 99%, 27%);
   --color-theme-2-key-bg-neutral: hsl(45, 7%, 89%);
   --color-theme-2-key-shadow-neutral: 0 0.2rem hsl(35, 11%, 61%);
-  --color-theme-2-text-primary: hsl(221, 14%, 31%);
+  --color-theme-2-text-primary: hsl(60, 10%, 19%);
   --color-theme-2-text-secondary: hsl(0, 0%, 100%);
 
   /* Theme 3 */
@@ -90,7 +90,7 @@
   --color-theme-3-key-bg-neutral: hsl(268, 47%, 21%);
   --color-theme-3-key-shadow-neutral: 0 0.2rem hsl(290, 70%, 36%);
   --color-theme-3-text-primary: hsl(52, 100%, 62%);
-  --color-theme-3-text-secondary: hsl(52, 100%, 62%);
+  --color-theme-3-text-secondary: hsl(198, 20%, 13%);
   --color-theme-3-text-white: hsl(0, 0%, 100%);
 }
 

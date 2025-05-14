@@ -70,7 +70,7 @@ const ButtonGrid = ({
           {row.map((key) => (
             <Button
               className={cn(
-                `${getThemeClass("textSecondary")} 
+                `${getThemeClass("textPrimary")} 
                 ${getThemeClass("keyBgNeutral")} 
                 ${getThemeClass("keyShadow")} 
                 ${key === "DEL" && `${getThemeClass("keyBg")} ${getThemeClass("textPrimary")}`}`
