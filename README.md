@@ -14,7 +14,7 @@ This project is a solution to the **Frontend Mentor Challenge** 🏆: [Calculato
 ## Technologies Used 🛠️
 
 - **React**: For building the user interface ⚛️.
-- **TypeScript**: For type safety and better developer experience 🛡️.s
+- **TypeScript**: For type safety and better developer experience 🛡️.
 - **Tailwind CSS**: For styling and responsive design 🎨.
 - **Vite**: For fast and efficient development and build processes ⚡.
 - **Vitest**: For unit and integration testing 🧪.
