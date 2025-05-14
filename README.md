@@ -1,6 +1,6 @@
 # Calculator App UI
 
-This project is a solution to a **Frontend Mentor Challenge** 🏆. It focuses on building a responsive and visually appealing calculator application user interface while leveraging modern web development tools and libraries 🚀.
+This project is a solution to the **Frontend Mentor Challenge** 🏆: [Calculator App](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29). It focuses on building a responsive and visually appealing calculator application user interface while leveraging modern web development tools and libraries.
 
 ## Features ✨
 
