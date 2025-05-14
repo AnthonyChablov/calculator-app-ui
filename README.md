@@ -1,6 +1,6 @@
 # Calculator App UI
 
-This project is a solution to the **Frontend Mentor Challenge** 🏆: [Calculator App](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29). It focuses on building a responsive and visually appealing calculator application user interface while leveraging modern web development tools and libraries.
+This project is a solution to the **Frontend Mentor Challenge** 🏆: [Calculator App](https://www.frontendmentor.io/solutions/calculator-application-solution---anthony-chablov-4uEjAfTLxv). you It focuses on building a responsive and visually appealing calculator application user interface while leveraging modern web development tools and libraries.
 
 ## Features ✨
 
@@ -14,7 +14,7 @@ This project is a solution to the **Frontend Mentor Challenge** 🏆: [Calculato
 ## Technologies Used 🛠️
 
 - **React**: For building the user interface ⚛️.
-- **TypeScript**: For type safety and better developer experience 🛡️.
+- **TypeScript**: For type safety and better developer experience 🛡️.s
 - **Tailwind CSS**: For styling and responsive design 🎨.
 - **Vite**: For fast and efficient development and build processes ⚡.
 - **Vitest**: For unit and integration testing 🧪.
