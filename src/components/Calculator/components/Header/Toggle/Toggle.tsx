@@ -47,7 +47,11 @@ const Toggle = ({ onThemeChange, initialTheme, title }: ToggleProps) => {
           text={title}
           className={cn(` text-gray-600 dark:text-gray-300
               px-2 uppercase text-sm font-semibold
-              ${getThemeClass("textPrimary")}
+              ${
+                initialTheme === 1
+                  ? getThemeClass("textSecondary")
+                  : getThemeClass("textPrimary")
+              }
             `)}
         />
       )}
@@ -69,7 +73,11 @@ const Toggle = ({ onThemeChange, initialTheme, title }: ToggleProps) => {
               className={cn(`
                   px-2 uppercase text-sm
                   font-semibold absolute transform left-1 -translate-y-8
-                  ${getThemeClass("textPrimary")}
+                  ${
+                    initialTheme === 1
+                      ? getThemeClass("textSecondary")
+                      : getThemeClass("textPrimary")
+                  }
                 `)}
             />
             <button
