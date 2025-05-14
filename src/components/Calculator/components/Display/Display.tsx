@@ -53,7 +53,11 @@ const Display = ({
           text={value || error}
           className={cn(
             `text-gray-800 dark:text-gray-200 text-5xl font-semibold whitespace-nowrap
-              ${getThemeClass("textPrimary")}
+               ${
+                 currentTheme === 1
+                   ? getThemeClass("textSecondary")
+                   : getThemeClass("textPrimary")
+               }
             `
           )}
         ></ParagraphText>
